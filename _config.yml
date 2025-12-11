@@ -5,7 +5,5 @@ baseurl: ""     # leave empty for user site; use "/REPO" for project sites
 url: "https://goblinwars.github.io"
 markdown: kramdown
 permalink: /:title/
-exclude:
-
-Gemfile
+exclude: Gemfile
 node_modules
