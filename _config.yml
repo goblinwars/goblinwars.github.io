@@ -1,0 +1,5 @@
+title: Test site
+description: A simple GitHub Pages test site
+theme: minima
+baseurl: ""     # leave empty for user site; use "/REPO" for project sites
+url: "https://goblinwars.github.io"
