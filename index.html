@@ -32,6 +32,29 @@
       box-sizing:border-box;
     }
 
+/* grid: main + sidebar */
+.grid{
+  display:grid;
+  gap:12px;
+  grid-template-columns: 1fr 320px; /* main content + fixed sidebar width */
+  align-items:start;
+}
+
+/* allow sidebar to shrink on small screens */
+@media (max-width:900px){
+  .grid{ grid-template-columns: 1fr; } /* stack on narrow viewports */
+}
+
+/* ensure aside/card doesn't stretch full width inside its column */
+aside.card{ max-width:100%; width:100%; box-sizing:border-box; }
+
+/* header layout tweaks so nav doesn't push grid */
+header{ width:100%; align-items:center; }
+header .brand{ flex:0 0 auto; min-width:0; }
+nav{ flex:1 1 auto; justify-content:flex-end; min-width:0; }
+
+
+
     .container{
       width:100%;
       max-width:var(--max-width);
@@ -78,36 +101,47 @@
     h1{font-size:1.25rem;margin:0}
     p{color:var(--muted);margin:8px 0 0 0;line-height:1.45}
 
-    nav{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
+/* keep nav from stretching layout */
+nav{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+  min-width:0; /* prevent overflow from forcing column growth */
+}
 
-    .btn{
-      appearance:none;
-      border:0;
-      padding:8px 12px;
-      background:transparent;
-      color:var(--accent);
-      border-radius:8px;
-      cursor:pointer;
-      font-weight:600;
-    }
+/* buttons won't grow to fill parent */
+.btn{
+  appearance:none;
+  border:0;
+  padding:8px;
+  width:auto;
+  height:auto;
+  min-width:44px;
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto; /* prevent flex children from growing/shrinking unexpectedly */
+  background:transparent;
+  color:var(--accent);
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition:transform .08s ease, box-shadow .12s ease;
+}
+.btn svg{ width:20px; height:20px; display:block; }
 
-    /* layout for content cards */
-    .grid{
-      display:grid;
-      gap:12px;
-      grid-template-columns:1fr;
-    }
+/* accessibility feedback */
+.btn:focus{ outline:3px solid rgba(57,160,255,0.18); outline-offset:2px; }
+.btn:active{ transform:translateY(1px); }
 
-    /* make columns on wider screens */
-    @media (min-width:720px){
-      .grid{
-        grid-template-columns: 2fr 1fr;
-      }
-    }
+/* mobile tweak without affecting layout */
+@media (max-width:420px){
+  nav{ gap:12px; }
+  .btn{ padding:10px; border-radius:10px; min-width:48px; min-height:48px; }
+  .btn svg{ width:22px; height:22px; }
+}
 
     /* utility */
     .muted{color:var(--muted);font-size:0.9rem}
