@@ -91,6 +91,12 @@ nav{ flex:1 1 auto; justify-content:flex-end; min-width:0; }
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
     }
     .logo img{ width:100%; height:100%; display:block; object-fit:contain; }
+    .brand > div { display:flex; flex-direction:column; align-items:center; gap:4px; min-width:0; }
+
+    .title-logo { display:inline-flex; align-items:center; justify-content:center; }
+    .title-img { width:220px; height:auto; max-width:100%; object-fit:contain; }
+
+
     .card{
       background:var(--card);
       border-radius:var(--radius);
@@ -147,6 +153,9 @@ nav{
     /* utility */
     .muted{color:var(--muted);font-size:0.75rem}.country{font-size:0.75rem;font-weight:600}
     footer{font-size:0.85rem;color:var(--muted);text-align:center;padding:8px}
+
+
+
   </style>
 </head>
 <body>
@@ -154,10 +163,13 @@ nav{
     <header>
       <a class="brand" href="https://goblinwars.github.io/#">
 	      <span class="logo">
-<img src="images/logo.svg" alt="S.C.D." />
+<img src="./index_files/logo.svg" alt="S.C.D.">
 	      </span>
         <div>
-          <div style="font-weight:600">Goblin Wars</div>
+          <span class="title-logo">
+    <img src="images/GoblinWars.svg" alt="Goblin Wars" class="title-img" />
+    </span>
+  
           <div class="muted" style="font-size:0.75rem">Links Portal</div>
         </div>
       </a>
@@ -189,22 +201,20 @@ nav{
       <article class="card">
 <div style="font-weight:500"><h1>Book Purchase </h1>
         <p>
-</p><ul>
- <li><span class="country">USA</span><a class="btn" href="https://www.amazon.com/dp/B0FGDP24Q7/ref=nosim?tag=goblinwars-20" target="_blank" rel="noopener">https://www.amazon.com/dp/B0FGDP24Q7/ref=nosim?tag=goblinwars-20</a></li>	
-  <li><span class="country">Ireland</span><a class="btn" href="https://www.amazon.ie/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.ie/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">United Kingdom</span><a class="btn" href="https://www.amazon.co.uk/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.co.uk/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Sweden</span><a class="btn" href="https://www.amazon.se/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.se/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Poland</span><a class="btn" href="https://www.amazon.pl/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.pl/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Italy</span><a class="btn" href="https://www.amazon.it/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.it/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Germany</span><a class="btn" href="https://www.amazon.de/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.de/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Netherlands</span><a class="btn" href="https://www.amazon.nl/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.nl/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Belgium</span><a class="btn" href="https://www.amazon.com.be/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.com.be/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">France</span><a class="btn" href="https://www.amazon.fr/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.fr/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Spain</span><a class="btn" href="https://www.amazon.es/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.es/dp/B0FGDP24Q7</a></li>
-  <li><span class="country">Canada</span><a class="btn" href="https://www.amazon.ca/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">https://www.amazon.ca/dp/B0FGDP24Q7</a></li>
-</ul>
-</div>
-	<p></p>
+<a href="https://www.amazon.com/dp/B0FGDP24Q7/ref=nosim?tag=goblinwars-20" target="_blank" rel="noopener">🇺🇸USA</a> https://www.amazon.com/dp/B0FGDP24Q7/ref=nosim?tag=goblinwars-20<br>
+<a href="https://www.amazon.ie/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇮🇪Ireland </a> https://www.amazon.ie/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.co.uk/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇬🇧United Kingdom</a> https://www.amazon.co.uk/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.se/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇸🇪Sweden</a> https://www.amazon.se/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.pl/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇵🇱Poland</a> https://www.amazon.pl/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.it/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇮🇹Italy</a> https://www.amazon.it/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.de/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇩🇪Germany</a> https://www.amazon.de/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.nl/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇳🇱Netherlands</a> https://www.amazon.nl/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.com.be/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇧🇪Belgium</a> https://www.amazon.com.be/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.fr/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇫🇷France</a> https://www.amazon.fr/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.es/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇪🇸Spain</a> https://www.amazon.es/dp/B0FGDP24Q7<br>
+<a href="https://www.amazon.ca/dp/B0FGDP24Q7" target="_blank" rel="noopener noreferrer">🇨🇦Canada</a> https://www.amazon.ca/dp/B0FGDP24Q7<br>	
+
+<p></p>
 
         <h2 style="font-size:1rem;margin-top:12px">USA</h2>
         <p class="muted">“As an Amazon Associate I earn from qualifying purchases.”</p>
@@ -215,7 +225,7 @@ nav{
         <p class="muted" style="margin:0">Sorry to Australia Japan doesnt support Standard Color</p>
       
 	   <div style="margin-top:12px;border-radius:8px;overflow:hidden;">
-  <video controls preload="none" poster="images/RedClef.svg" style="width:100%;display:block;">
+  <video controls="" preload="none" poster="images/RedClef.svg" style="width:100%;display:block;">
     <source src="Videos/Launch.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
@@ -228,6 +238,7 @@ nav{
       <div class="muted">🄯 2025 — In Progress</div>
     </footer>
   </main>
+
 
 
 </body></html>
