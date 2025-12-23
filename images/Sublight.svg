@@ -3,7 +3,7 @@
     .loop {
       fill: #4682b4;
       transform-origin: 50px 50px;
-      animation: grow 3s steps(72) infinite;
+      animation: grow 3s steps(72) infinite reverse;
     }
     @keyframes grow {
       from { transform: scale(0); }
