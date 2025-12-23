@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" width="1000" height="1000">
+  <style>
+    /* Fixed width/height using integers to avoid Scour crash */
+    :root { --blue: #1e90ff; }
+    
+    .step-24 {
+      fill: var(--blue);
+      transform-origin: 50px 50px;
+      /* Initial state defined outside keyframes */
+      transform: scale(0); 
+      animation: expand 3s steps(72, end) forwards;
+    }
+
+    @keyframes expand {
+      from { transform: scale(0); }
+      to   { transform: scale(2); }
+    }
+  </style>
+  
+  <circle class="step-24" cx="50" cy="50" r="75" />
+</svg>
