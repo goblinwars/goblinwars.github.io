@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" width="288" height="142">>
+  <style>
+    .loop {
+      fill: #4682b4;
+      transform-origin: 50px 50px;
+      animation: grow 3s steps(72) infinite;
+    }
+    @keyframes grow {
+      from { transform: scale(0); }
+      to { transform: scale(2); }
+    }
+  </style>
+  <circle class="loop" cx="50" cy="50" r="75" />
+</svg>
