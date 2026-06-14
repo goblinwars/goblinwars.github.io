@@ -155,6 +155,45 @@ nav{
 .btn:focus{ outline:3px solid rgba(57,160,255,0.18); outline-offset:2px; }
 .btn:active{ transform:translateY(1px); }
 
+#retro-counter{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8px;
+    background: linear-gradient(#222,#111);
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    padding: 6px 12px;
+    border: 2px solid #444;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+  }
+  #counter-number{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background: rgba(0,0,0,0.25);
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+  .label{
+    font-size: 12px;
+    color: #9f9;
+    opacity: 0.9;
+    text-transform: lowercase;
+  }
+
+  /* optional small-screen tweak */
+  @media (max-width:420px){
+    #retro-counter{ font-size: 14px; padding: 4px 8px; bottom:6px; }
+    #counter-number{ font-size:16px; }
+  }
+
+	  
 /* mobile tweak without affecting layout */
 @media (max-width:420px){
   nav{ gap:0px; }
@@ -300,7 +339,12 @@ Latest Advert #6<br>
   <img class="email" src="images/email.svg" alt="goblinwars at proton dot me">
 <br>
        © 2026 by (♾️S.C.🌛D.➡️) is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://www.kernel.org/theme/images/logos/favicon.png" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
-    </footer>
+<br>
+		<div id="retro-counter">
+  <span id="counter-number">0</span>
+  <span class="label">Units Processed</span>
+</div>
+	</footer>
   </main>
 
 
