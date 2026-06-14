@@ -186,13 +186,14 @@ nav{
     opacity: 0.9;
     text-transform: lowercase;
   }
-
-  /* optional small-screen tweak */
-  @media (max-width:420px){
-    #retro-counter{ font-size: 14px; padding: 4px 8px; bottom:6px; }
-    #counter-number{ font-size:16px; }
-  }
-
+.retro-counter{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(8px + 80px); /* 8px gap + footer height */
+  z-index: 9999;
+  /* rest of counter styles */
+}
 	  
 /* mobile tweak without affecting layout */
 @media (max-width:420px){
@@ -332,10 +333,7 @@ Latest Advert #6<br>
 		  
 	  </aside>
     </section>
-<div id="retro-counter">
-  <span id="counter-number">0</span>
-  <span class="label">Units Processed</span>
-</div>
+
     <footer class="card" style="text-align:center;">
 		
 		
@@ -345,7 +343,10 @@ Latest Advert #6<br>
 	</footer>
 
   </main>
-
+<div id="retro-counter">
+  <span id="counter-number">0</span>
+  <span class="label">Units Processed</span>
+</div>
 
 
 </body></html>
