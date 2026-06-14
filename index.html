@@ -155,23 +155,25 @@ nav{
 .btn:focus{ outline:3px solid rgba(57,160,255,0.18); outline-offset:2px; }
 .btn:active{ transform:translateY(1px); }
 
-#retro-counter{
-    
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 8px;
-    background: linear-gradient(#222,#111);
-    color: #0f0;
-    font-family: "Courier New", Courier, monospace;
-    padding: 6px 12px;
-    border: 2px solid #444;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 9999;
-  }
+#retro-counter {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(8px + 80px);
+  z-index: 9999;
+
+  background: linear-gradient(#222,#111);
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  padding: 6px 12px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+	  
   #counter-number{
     font-weight: bold;
     font-size: 20px;
@@ -186,14 +188,7 @@ nav{
     opacity: 0.9;
     text-transform: lowercase;
   }
-.retro-counter{
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(8px + 80px); /* 8px gap + footer height */
-  z-index: 9999;
-  /* rest of counter styles */
-}
+
 	  
 /* mobile tweak without affecting layout */
 @media (max-width:420px){
